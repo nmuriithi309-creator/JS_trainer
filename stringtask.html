@@ -1,6 +1,49 @@
- f_name = "  JOHn  ."
-clean_name = f_name.strip(" .").lower()
+<!DOCTYPE html>
+<html lang="en">
 
-print(clean_name)
- 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
+<body>
+    <div class="=container">
+
+    </div>
+    <script>
+        let first_name = "Jane "
+          let last_name = "Doe"
+          let full_name = first_name + " " + last_name
+          let full_name2 = first_name.concat(last_name)
+          console.log(full_name) //JaneDoe
+
+
+          console.log(`My name is ${first_name} ${last_name}`)
+
+          console.log(first_name.length)//5
+          console.log(last_name[2])//e
+
+          console.log(first_name.slice(1,4))//ane
+          console.log(first_name.slice(2))//ne
+
+          let x = "My Cat is Sick"
+          console.log(x.toUpperCase())
+          console.log(x.toLowerCase())
+
+          console.log(x.startsWith('My'))//true
+          console.log(x.endsWith('eck')) //false
+
+          let y = " This is a string    .    "
+          let trimmed = y.trim()
+          console.log(trimmed)
+
+          let z = "This-is-a-new-string"
+          console.log(z.split('-'))//['This', 'is', 'a', 'new', 'string']
+
+          let a = "My phone number is , 0712345678"
+          console.log(a.split(','))//['My phone number is ', ' 0712345678']
+    </script>
+</body>
+
+</html>

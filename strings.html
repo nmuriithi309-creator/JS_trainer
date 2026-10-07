@@ -6,50 +6,39 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <p>String Method</p>
-
-        </div>
+    <div class="container">
+<p>This is string method</p>
+    </div>
     <script>
-let first_name = "Jane"
-let last_name = "Doe"
-let full_name = first_name + last_name
-let full_name2 = first_name.concat(last_name)
-console.log(full_name)
-console.log(full_name2)
+        let first_name="Jane"
+        let last_name="Doe"
+        let full_name=first_name+""+last_name
+        let full_name2=first_name.concat(last_name)
+        console.log(full_name)
 
-let str = `My name is $(full_name)`
-console.log(str)//My name is Jane Doe
+        console.log(`My name is ${first_name} ${last_name}`)
+        console.log(first_name.length)
+        console.log(last_name[2])
+        console.log(first_name.slice(1,4))
+        console.log(first_name.slice(2))
 
-console.log(first_name[0])
-console.log(first_name[2])
+        let x = "My Cat is sick"
+        console.log(x.toUpperCase())
+        console.log(x.toLowerCase())
 
-//length
-console.log(first_name.length)//5
+        console.log(x.startsWith('My'))
+        console.log(x.endsWith('eck'))
 
-let x = "This is a test string"
-console.log(x.slice[0,7])//This
+        let y ="This is a string "
+        let trimmed=y.trim()
+        console.log(trimmed)
 
-console.log(x.toLowerCase())//this is a test string
-console.log(x.toUpperCase())//THIS IS A TEST STRING
+        let z ="This-is-a-new-string"
+        console.log(z.split('-'))
 
-console.log(x.includes('x'))//false
-console.log(x.includes("This"))//true
+        let a = "My phone number is , 073458596"
+        console.log(a.split(','))
 
-console.log(x.startsWith("T"))//true
-console.log(x.endsWith('eng'))//false
-
-let y = " jack    "
-console.log(y.trim())
-console.log(y.trimEnd())
-console.log(y.trimStart())
-
-let num = 23
-num++
-num++
-num++
-num--
-console.log(num)
     </script>
 </body>
 </html>

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Kenya Tax Calculator</title>
+</head>
+
+<body>
+
+   
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="#">
+                MyTax Kenya
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mytax">
+                            My Tax
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="https://itax.kra.go.ke/"
+                            target="_blank">
+
+                            iTax
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+   
+    <section class="hero-section">
+
+        <div class="container text-center">
+
+            <h1 class="display-5 fw-bold">
+                Kenya Salary Tax Calculator
+            </h1>
+
+            <p class="lead mt-3">
+                Calculate your gross salary, statutory deductions,
+                taxable income, PAYE and estimated net salary.
+            </p>
+
+            <a href="#calculator" class="btn btn-light btn-lg mt-3">
+                Start Calculating
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <main class="container my-5" id="home">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-9">
+
+
+                <div
+                    id="calculator"
+                    class="card calculator-card shadow-lg border-0">
+
+                    <div class="card-body p-4 p-md-5">
+
+                        <div class="text-center mb-4">
+
+                            <h2 class="fw-bold">
+                                Salary Calculator
+                            </h2>
+
+                            <p class="text-muted">
+                                Enter your salary information below.
+                            </p>
+
+                        </div>
+
+
+                        <form id="tax_form">
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-4">
+
+                                    <label
+                                        for="basic"
+                                        class="form-label fw-semibold">
+
+                                        Basic Salary
+
+                                    </label>
+
+                                    <div class="input-group">
+
+                                        <span class="input-group-text">
+                                            KSh
+                                        </span>
+
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            id="basic"
+                                            placeholder="e.g. 50000"
+                                            min="0"
+                                            required>
+
+                                    </div>
+
+                                </div>
+
+
+                              
+                                <div class="col-md-6 mb-4">
+
+                                    <label
+                                        for="benefits"
+                                        class="form-label fw-semibold">
+
+                                        Benefits
+
+                                    </label>
+
+                                    <div class="input-group">
+
+                                        <span class="input-group-text">
+                                            KSh
+                                        </span>
+
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            id="benefits"
+                                            placeholder="e.g. 10000"
+                                            min="0"
+                                            required>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary btn-lg w-100">
+
+                                Calculate Salary
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+
+               
+                <div class="card shadow-lg border-0 mt-5">
+
+                    <div class="card-body p-4">
+
+                        <h2 class="text-center fw-bold mb-4">
+                            Salary Breakdown
+                        </h2>
+
+
+                        <div class="table-responsive">
+
+                            <table
+                                class="table table-hover align-middle mb-0">
+
+                                <thead>
+
+                                    <tr>
+                                        <th>Tax Category</th>
+                                        <th class="text-end">
+                                            Amount
+                                        </th>
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>
+                                            Gross Salary
+                                        </td>
+
+                                        <td
+                                            id="gross"
+                                            class="text-end fw-semibold">
+
+                                            KSh 0.00
+
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>
+                                            SHIF
+                                        </td>
+
+                                        <td
+                                            id="nhif"
+                                            class="text-end">
+
+                                            KSh 0.00
+
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>
+                                            NSSF
+                                        </td>
+
+                                        <td
+                                            id="nssf"
+                                            class="text-end">
+
+                                            KSh 0.00
+
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>
+                                            Housing Levy
+                                        </td>
+
+                                        <td
+                                            id="nhdf"
+                                            class="text-end">
+
+                                            KSh 0.00
+
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>
+                                            Taxable Income
+                                        </td>
+
+                                        <td
+                                            id="taxable"
+                                            class="text-end">
+
+                                            KSh 0.00
+
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>
+                                            PAYE
+                                        </td>
+
+                                        <td
+                                            id="payee"
+                                            class="text-end">
+
+                                            KSh 0.00
+
+                                        </td>
+                                    </tr>
+
+
+                                    <tr class="net-row">
+
+                                        <td class="fw-bold">
+                                            Net Salary
+                                        </td>
+
+                                        <td
+                                            id="net"
+                                            class="text-end fw-bold">
+
+                                            KSh 0.00
+
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <section id="mytax" class="tax-info-section py-5">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2 class="fw-bold">
+                    Understanding Your Tax
+                </h2>
+
+                <p class="text-muted">
+                    A simple overview of common salary deductions.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                 SHIF 
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="card info-card h-100 border-0 shadow-sm">
+
+                        <div class="card-body">
+
+                            <div class="info-number">
+                                01
+                            </div>
+
+                            <h4 class="fw-bold mt-3">
+                                SHIF
+                            </h4>
+
+                            <p class="text-muted">
+                                Social Health Insurance Fund
+                                contributions help finance healthcare
+                                services.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                NSSF 
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="card info-card h-100 border-0 shadow-sm">
+
+                        <div class="card-body">
+
+                            <div class="info-number">
+                                02
+                            </div>
+
+                            <h4 class="fw-bold mt-3">
+                                NSSF
+                            </h4>
+
+                            <p class="text-muted">
+                                NSSF is a retirement savings
+                                contribution made by employees and
+                                employers.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                 HOUSING 
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="card info-card h-100 border-0 shadow-sm">
+
+                        <div class="card-body">
+
+                            <div class="info-number">
+                                03
+                            </div>
+
+                            <h4 class="fw-bold mt-3">
+                                Housing Levy
+                            </h4>
+
+                            <p class="text-muted">
+                                The Affordable Housing Levy is
+                                deducted from an employee's gross
+                                monthly salary.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                PAYE 
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="card info-card h-100 border-0 shadow-sm">
+
+                        <div class="card-body">
+
+                            <div class="info-number">
+                                04
+                            </div>
+
+                            <h4 class="fw-bold mt-3">
+                                PAYE
+                            </h4>
+
+                            <p class="text-muted">
+                                PAYE is income tax deducted from
+                                taxable employment income.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="container py-5">
+
+        <div class="itax-box text-center">
+
+            <h2 class="fw-bold">
+                Need to Access KRA iTax?
+            </h2>
+
+            <p>
+                Visit the official KRA iTax portal for tax filing
+                and other tax services.
+            </p>
+
+            <a
+                href="https://itax.kra.go.ke/"
+                target="_blank"
+                class="btn btn-outline-light btn-lg">
+
+                Visit iTax
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <footer class="bg-dark text-white">
+
+        <div class="container py-4">
+
+            <div
+                class="d-flex flex-column flex-md-row
+                justify-content-between align-items-center">
+
+                <p class="mb-2 mb-md-0">
+                    MyTax Kenya © 2026 Copyright
+                </p>
+
+                <p class="mb-0 text-secondary">
+                    Salary Tax Calculator
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="tax.js"></script>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>

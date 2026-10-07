@@ -1,0 +1,192 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f7fa;
+    font-family: Arial, sans-serif;
+    color: #212529;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    font-size: 16px;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    transform: translateY(-2px);
+}
+
+
+/* HERO */
+
+.hero-section {
+    background: linear-gradient(
+        135deg,
+        #0d6efd,
+        #084298
+    );
+
+    color: white;
+    padding: 90px 20px;
+}
+
+.hero-section p {
+    max-width: 700px;
+    margin: auto;
+}
+
+
+/* CALCULATOR */
+
+.calculator-card {
+    margin-top: -80px;
+    border-radius: 18px;
+}
+
+.card {
+    border-radius: 16px;
+}
+
+.form-control,
+.input-group-text {
+    padding: 13px;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+.btn {
+    border-radius: 10px;
+}
+
+.btn-primary {
+    font-weight: bold;
+    padding: 13px;
+}
+
+
+/* TABLE */
+
+table {
+    background-color: white;
+}
+
+table thead {
+    background-color: #212529;
+    color: white;
+}
+
+table th,
+table td {
+    padding: 16px !important;
+}
+
+table tbody tr:hover {
+    background-color: #f1f5ff;
+}
+
+.net-row {
+    background-color: #e7f1ff;
+    font-size: 18px;
+}
+
+#net {
+    color: #0d6efd;
+}
+
+
+/* TAX INFORMATION */
+
+.tax-info-section {
+    background-color: white;
+}
+
+.info-card {
+    transition: 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+}
+
+.info-number {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background-color: #e7f1ff;
+    color: #0d6efd;
+
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/* ITAX */
+
+.itax-box {
+    background: linear-gradient(
+        135deg,
+        #212529,
+        #343a40
+    );
+
+    color: white;
+
+    padding: 55px 30px;
+
+    border-radius: 20px;
+}
+
+
+/* FOOTER */
+
+footer {
+    margin-top: 20px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .hero-section {
+        padding: 70px 20px 100px;
+    }
+
+    .hero-section h1 {
+        font-size: 34px;
+    }
+
+    .calculator-card {
+        margin-top: -70px;
+    }
+
+    .navbar-nav {
+        margin-top: 10px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+    }
+}
